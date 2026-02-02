@@ -1,0 +1,21 @@
+{
+  "dart.flutterSdkPath": ".fvm/versions/3.35.0",
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true
+  },
+  "dart.lineLength": 150,
+  "[dart]": {
+    "editor.rulers": [
+      150
+    ]
+  },
+  "cmake.ignoreCMakeListsMissing": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.dart": "${capture}.mobile.dart, ${capture}.tablet.dart, ${capture}.desktop.dart, ${capture}.form.dart, ${capture}.g.dart, ${capture}.freezed.dart, ${capture}.router.dart, ${capture}.gr.dart, ${capture}.state.dart, ${capture}.event.dart, ${capture}.bloc.dart, ${capture}.cubit.dart, ${capture}.model.dart, ${capture}.dto.dart, ${capture}.repository.dart, ${capture}.service.dart, ${capture}.injectable.dart, ${capture}.config.dart,"
+  },
+  "java.configuration.updateBuildConfiguration": "interactive"
+}
