@@ -1,9 +1,10 @@
+import 'package:approachable_geek/app/app_colors.dart';
 import 'package:flutter/material.dart';
 
 // Context Extension
 extension ContextExtension on BuildContext {
   TextTheme get textTheme => Theme.of(this).textTheme;
-  ColorScheme get colorScheme => Theme.of(this).colorScheme;
+  AppColors get colorScheme => Theme.of(this).extension<AppColors>()!;
 
   Size get _size => MediaQuery.of(this).size;
   bool get isPortrait => _size.height > _size.width;
@@ -31,4 +32,17 @@ extension TextStyleX on TextStyle? {
 }
 
 // Color Extension
-extension CustomColorScheme on ColorScheme {}
+extension CustomColorScheme on ColorScheme {
+  Color get brand => Color(0xFF4169E1);
+  Color get background => Color(0xFFFFFFFF);
+}
+
+extension ColorExt on Color {
+  static Color fromHex(String hexString) {
+    final buffer = StringBuffer();
+    if (hexString.length == 6 || hexString.length == 7) buffer.write('ff');
+    buffer.write(hexString.replaceFirst('#', ''));
+    int? color = int.tryParse(buffer.toString(), radix: 16);
+    return color == null ? Colors.white : Color(color);
+  }
+}
