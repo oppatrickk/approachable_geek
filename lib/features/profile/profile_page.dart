@@ -31,14 +31,52 @@ class ProfilePage extends StatelessWidget {
                         style: context.textTheme.headlineMedium?.semibold.cColor(context.colorScheme.primary),
                       ),
                     ),
-                    verticalSpace(16),
-                    Container(
-                      height: 128,
-                      width: 128,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: context.colorScheme.primary,
-                      ),
+                    verticalSpace(24),
+                    Stack(
+                      alignment: Alignment.topRight,
+                      children: [
+                        Container(
+                          height: 128,
+                          width: 128,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: context.colorScheme.primary,
+                              width: 6,
+                            ),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/user.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 2,
+                          top: 12,
+                          child: Container(
+                            height: 32,
+                            width: 32,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: context.colorScheme.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: context.colorScheme.black.withAlpha(50),
+                                  blurRadius: 4,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.edit,
+                                color: context.colorScheme.primary,
+                                size: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     verticalSpace(24),
                     ProfileItem(
