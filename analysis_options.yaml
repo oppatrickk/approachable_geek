@@ -20,6 +20,9 @@ analyzer:
     library_private_types_in_public_api: ignore
     always_specify_types: ignore
 
+formatter:
+  trailing_commas: preserve
+
 linter:
   rules:
     public_member_api_docs: false
