@@ -1,8 +1,12 @@
+import 'package:approachable_geek/core/enums/profile_item_type.dart';
 import 'package:approachable_geek/core/utils/extensions.dart';
 import 'package:approachable_geek/core/utils/ui_helpers.dart';
 import 'package:approachable_geek/features/profile/widgets/profile_item.dart';
+import 'package:approachable_geek/features/profile/widgets/profile_photo.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+@RoutePage()
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
@@ -32,66 +36,25 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     verticalSpace(24),
-                    Stack(
-                      alignment: Alignment.topRight,
-                      children: [
-                        Container(
-                          height: 128,
-                          width: 128,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: context.colorScheme.primary,
-                              width: 6,
-                            ),
-                            image: const DecorationImage(
-                              image: AssetImage('assets/images/user.png'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          right: 2,
-                          top: 12,
-                          child: Container(
-                            height: 32,
-                            width: 32,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: context.colorScheme.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: context.colorScheme.black.withAlpha(50),
-                                  blurRadius: 4,
-                                  offset: const Offset(0, 2),
-                                ),
-                              ],
-                            ),
-                            child: Center(
-                              child: Icon(
-                                Icons.edit,
-                                color: context.colorScheme.primary,
-                                size: 18,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    ProfilePhoto(),
                     verticalSpace(24),
                     ProfileItem(
+                      type: ProfileItemType.name,
                       title: 'Name',
                       content: 'Micah Smith',
                     ),
                     ProfileItem(
+                      type: ProfileItemType.phone,
                       title: 'Phone',
-                      content: 'Micah Smith',
+                      content: '(208) 206-5039',
                     ),
                     ProfileItem(
+                      type: ProfileItemType.email,
                       title: 'Email',
-                      content: 'Micah Smith',
+                      content: 'micahsmith@gmail.com',
                     ),
                     ProfileItem(
+                      type: ProfileItemType.about,
                       title: 'Tell us about yourself',
                       content:
                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
