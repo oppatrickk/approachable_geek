@@ -1,5 +1,8 @@
+import 'package:approachable_geek/core/enums/profile_item_type.dart';
+import 'package:approachable_geek/core/router/router.dart';
 import 'package:approachable_geek/core/utils/extensions.dart';
 import 'package:approachable_geek/core/utils/ui_helpers.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class ProfileItem extends StatelessWidget {
@@ -7,15 +10,17 @@ class ProfileItem extends StatelessWidget {
     super.key,
     required this.title,
     required this.content,
+    required this.type,
   });
 
   final String title;
   final String content;
+  final ProfileItemType type;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => {},
+      onTap: () => {context.router.push(ProfileUpdateRoute(profileItemType: type))},
       child: Column(
         children: [
           verticalSpace(4),
