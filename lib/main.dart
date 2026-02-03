@@ -1,6 +1,6 @@
 import 'package:approachable_geek/app/app.dart';
 import 'package:approachable_geek/app/bootstrap.dart';
-import 'package:approachable_geek/injection.dart';
+import 'package:approachable_geek/app/injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -19,5 +19,5 @@ void main() async {
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
   configureDependencies();
-  await bootstrap(() => const AppWidget());
+  await bootstrap(AppWidget.new);
 }
