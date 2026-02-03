@@ -1,8 +1,8 @@
 import 'package:approachable_geek/core/enums/profile_item_type.dart';
 import 'package:approachable_geek/core/utils/extensions.dart';
 import 'package:approachable_geek/core/utils/ui_helpers.dart';
-import 'package:approachable_geek/features/profile/widgets/profile_item.dart';
-import 'package:approachable_geek/features/profile/widgets/profile_photo.dart';
+import 'package:approachable_geek/features/profile/presentation/widgets/profile_item.dart';
+import 'package:approachable_geek/features/profile/presentation/widgets/profile_photo.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 

@@ -1,11 +1,11 @@
 import 'package:approachable_geek/core/enums/profile_item_type.dart';
 import 'package:approachable_geek/core/utils/extensions.dart';
 import 'package:approachable_geek/core/utils/ui_helpers.dart';
-import 'package:approachable_geek/features/profile_update/components/profile_update_about.dart';
-import 'package:approachable_geek/features/profile_update/components/profile_update_email.dart';
-import 'package:approachable_geek/features/profile_update/components/profile_update_name.dart';
-import 'package:approachable_geek/features/profile_update/components/profile_update_phone.dart';
-import 'package:approachable_geek/features/profile_update/components/profile_update_photo.dart';
+import 'package:approachable_geek/features/profile/presentation/components/profile_update_about.dart';
+import 'package:approachable_geek/features/profile/presentation/components/profile_update_email.dart';
+import 'package:approachable_geek/features/profile/presentation/components/profile_update_name.dart';
+import 'package:approachable_geek/features/profile/presentation/components/profile_update_phone.dart';
+import 'package:approachable_geek/features/profile/presentation/components/profile_update_photo.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
