@@ -1,4 +1,5 @@
 import 'package:approachable_geek/core/enums/profile_item_type.dart';
+import 'package:approachable_geek/features/profile/domain/entities/profile.dart';
 import 'package:approachable_geek/features/profile/presentation/pages/profile_page.dart';
 import 'package:approachable_geek/features/profile/presentation/pages/profile_update_page.dart';
 import 'package:approachable_geek/features/splash/splash_page.dart';

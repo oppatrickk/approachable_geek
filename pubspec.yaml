@@ -9,6 +9,8 @@ environment:
 dependencies:
   auto_route: ^11.1.0
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
+  equatable: ^2.0.8
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
@@ -17,6 +19,7 @@ dependencies:
   injectable: ^2.7.1+4
   intl: ^0.20.2
   json_annotation: ^4.10.0
+  shared_preferences: ^2.5.4
   shimmer: ^3.0.0
 
 dev_dependencies:
@@ -37,3 +40,4 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/data/

@@ -32,12 +32,14 @@ class ProfileUpdateRoute extends PageRouteInfo<ProfileUpdateRouteArgs> {
   ProfileUpdateRoute({
     Key? key,
     required ProfileItemType profileItemType,
+    required Profile user,
     List<PageRouteInfo>? children,
   }) : super(
          ProfileUpdateRoute.name,
          args: ProfileUpdateRouteArgs(
            key: key,
            profileItemType: profileItemType,
+           user: user,
          ),
          initialChildren: children,
        );
@@ -51,32 +53,41 @@ class ProfileUpdateRoute extends PageRouteInfo<ProfileUpdateRouteArgs> {
       return ProfileUpdatePage(
         key: args.key,
         profileItemType: args.profileItemType,
+        user: args.user,
       );
     },
   );
 }
 
 class ProfileUpdateRouteArgs {
-  const ProfileUpdateRouteArgs({this.key, required this.profileItemType});
+  const ProfileUpdateRouteArgs({
+    this.key,
+    required this.profileItemType,
+    required this.user,
+  });
 
   final Key? key;
 
   final ProfileItemType profileItemType;
 
+  final Profile user;
+
   @override
   String toString() {
-    return 'ProfileUpdateRouteArgs{key: $key, profileItemType: $profileItemType}';
+    return 'ProfileUpdateRouteArgs{key: $key, profileItemType: $profileItemType, user: $user}';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     if (other is! ProfileUpdateRouteArgs) return false;
-    return key == other.key && profileItemType == other.profileItemType;
+    return key == other.key &&
+        profileItemType == other.profileItemType &&
+        user == other.user;
   }
 
   @override
-  int get hashCode => key.hashCode ^ profileItemType.hashCode;
+  int get hashCode => key.hashCode ^ profileItemType.hashCode ^ user.hashCode;
 }
 
 /// generated route for
