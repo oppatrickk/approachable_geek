@@ -32,7 +32,7 @@ class CustomButton extends StatelessWidget {
           elevation: enabled ? 6 : 0,
           splashFactory: enabled ? null : NoSplash.splashFactory,
         ),
-        onPressed: enabled ? () {} : onPressed,
+        onPressed: enabled ? onPressed : () {},
 
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
