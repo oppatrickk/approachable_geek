@@ -5,6 +5,7 @@ import 'package:approachable_geek/features/profile/domain/entities/profile.dart'
 import 'package:approachable_geek/features/profile/presentation/blocs/profile_bloc.dart';
 import 'package:approachable_geek/features/profile/presentation/widgets/profile_item.dart';
 import 'package:approachable_geek/features/profile/presentation/widgets/profile_photo.dart';
+import 'package:approachable_geek/features/profile/presentation/widgets/profile_shimmer.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -36,7 +37,7 @@ class ProfilePage extends StatelessWidget {
                     builder: (context, state) {
                       return state.maybeMap(
                         initial: (_) => const SizedBox.shrink(),
-                        loading: (ProfileLoading value) => const Center(child: CircularProgressIndicator()),
+                        loading: (ProfileLoading value) => const ProfileShimmer(),
                         loaded: (ProfileLoaded value) {
                           Profile user = value.profile;
 
