@@ -82,6 +82,7 @@ The app follows **clean architecture** with a **feature-first folder structure**
 
 - **Feature-First Structure:** Each feature contains its own UI, domain, and data components, keeping related code together.  
 - **Clean Architecture Principles:** Business logic is decoupled from the UI, so the core functionality remains independent of presentation changes.  
+- **Type-Safe Routing:** Using Auto Route, the app defines routes as strongly typed objects, eliminating string-based navigation errors.
 - **Code Generation:** Reduces boilerplate for models, JSON serialization, and other repetitive tasks.  
 - **Dependency Injection:** Promotes modularity, testability, and easier management of dependencies.
 
