@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
+import 'dart:typed_data';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,7 +15,14 @@ class AppBlocObserver extends BlocObserver {
     final dynamic nextState = change.nextState;
 
     String nextStateString;
-    nextStateString = nextState.toString();
+    if (nextState is Uint8List) {
+      nextStateString = '[Bytes omitted]';
+    } else if (nextState.toString().length > 500) {
+      // Truncate if the string is too long
+      nextStateString = '${nextState.toString().substring(0, 500)}... [Truncated]';
+    } else {
+      nextStateString = nextState.toString();
+    }
 
     log('onChange(${bloc.runtimeType}, $nextStateString)');
   }
@@ -22,8 +30,13 @@ class AppBlocObserver extends BlocObserver {
   @override
   void onError(BlocBase<dynamic> bloc, Object error, StackTrace stackTrace) {
     String errorString;
-
-    errorString = error.toString();
+    if (error is Uint8List) {
+      errorString = '[Bytes omitted]';
+    } else if (error.toString().length > 500) {
+      errorString = '${error.toString().substring(0, 500)}... [Truncated]';
+    } else {
+      errorString = error.toString();
+    }
 
     log('onError(${bloc.runtimeType}, $errorString, $stackTrace)');
     super.onError(bloc, error, stackTrace);
