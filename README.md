@@ -7,7 +7,7 @@ Coding Project for Approachable Geek
 ---
 
 ## Table of Contents
-- [Video](#video)
+- [Demo Video](#demo-video)
 - [Getting Started](#getting-started)
 - [AI Usage](#ai-usage)
 - [Overview](#overview)
