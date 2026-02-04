@@ -1,10 +1,16 @@
 import 'package:approachable_geek/core/ui/custom_button.dart';
 import 'package:approachable_geek/core/utils/extensions.dart';
 import 'package:approachable_geek/core/utils/ui_helpers.dart';
+import 'package:approachable_geek/features/profile/domain/entities/profile.dart';
 import 'package:flutter/material.dart';
 
 class ProfileUpdatePhotoSection extends StatefulWidget {
-  const ProfileUpdatePhotoSection({super.key});
+  const ProfileUpdatePhotoSection({
+    super.key,
+    required this.user,
+  });
+
+  final Profile user;
 
   @override
   State<ProfileUpdatePhotoSection> createState() => _ProfileUpdatePhotoSectionState();
