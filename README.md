@@ -134,6 +134,22 @@ The decision to use **BLoC** was driven by several key considerations:
 This approach provides a maintainable and robust foundation for the shopping list app, balancing performance, clarity, and scalability.
 
 ## Screenshots
+| Profile View | Loading (Shimmer)
+| -------- | -------- | 
+| <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/9789a882-9cd8-409d-9663-7720f03d4b40" /> | <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/53c2cc25-f408-4844-8945-3c7f3cd271d6" /> |
+
+| Name | Phone |
+| -------- | ------- |
+| <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/211d698e-71ea-4f29-8003-7933a5d26153" /> | <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/a48f28ac-0f77-4140-8ad1-bf3eab797e53" /> |
+
+| Email | About |
+| -------- | ------- |
+| <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/fbf5a5aa-19c0-420e-8976-17596663a593" /> | <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/2b4b92c6-4664-48aa-a256-c20f76f63a47" /> |
+
+| Photo (Update) | Photo |
+| -------- | ------- |
+| <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/f9695083-16a0-4946-a3b3-1a0438565eb7" /> | <img width="434" height="968" alt="image" src="https://github.com/user-attachments/assets/cbe1a0ce-cc47-4832-a9dd-628313ff828a" /> |
+
 
 
 
