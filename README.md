@@ -10,10 +10,9 @@ Coding Project for Approachable Geek
 - [Video](#video)
 - [Getting Started](#getting-started)
 - [AI Usage](#ai-usage)
+- [Overview](#overview)
 - [Architecture](#architecture)
 - [State Management](#state-management)
-- [Trade-Offs and Decisions](#trade-offs-and-decisions)
-- [Estimated Time Spent](#estimated-time-spent)
 - [Screenshots](#screenshots)
 
 ---
