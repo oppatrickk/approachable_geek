@@ -1,7 +1,9 @@
 import 'package:approachable_geek/core/enums/profile_item_type.dart';
 import 'package:approachable_geek/core/router/router.dart';
 import 'package:approachable_geek/core/utils/extensions.dart';
+import 'package:approachable_geek/core/utils/string_extension.dart';
 import 'package:approachable_geek/core/utils/ui_helpers.dart';
+import 'package:approachable_geek/features/profile/domain/entities/profile.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
@@ -9,18 +11,26 @@ class ProfileItem extends StatelessWidget {
   const ProfileItem({
     super.key,
     required this.title,
-    required this.content,
     required this.type,
+    required this.user,
   });
 
   final String title;
-  final String content;
   final ProfileItemType type;
+
+  final Profile user;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => {context.router.push(ProfileUpdateRoute(profileItemType: type))},
+      onTap: () => {
+        context.router.push(
+          ProfileUpdateRoute(
+            profileItemType: type,
+            user: user,
+          ),
+        ),
+      },
       child: Column(
         children: [
           verticalSpace(4),
@@ -38,8 +48,16 @@ class ProfileItem extends StatelessWidget {
                       ),
                       verticalSpace(8),
                       Text(
-                        content,
+                        switch (type) {
+                          ProfileItemType.name => '${user.firstName} ${user.lastName}',
+                          ProfileItemType.email => user.email,
+                          ProfileItemType.phone => StringExtension.formatUSPhone(user.phone),
+                          ProfileItemType.about => user.about,
+                          ProfileItemType.photo => '',
+                        },
                         style: context.textTheme.bodyLarge?.bold,
+                        maxLines: 5,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   ),
